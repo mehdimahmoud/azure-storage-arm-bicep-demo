@@ -1,0 +1,13 @@
+name: Deploy Azure Storage
+on: [push]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Azure Login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    - name: Deploy Bicep
+      run: az deployment group create --resource-group demo-rg --template-file templates/storage-bicep.bicep
