@@ -9,5 +9,7 @@ jobs:
       uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
+        # Make sure AZURE_CREDENTIALS is set in your repository secrets:
+        # GitHub > Settings > Secrets and variables > Actions > New repository secret > Name: AZURE_CREDENTIALS
     - name: Deploy Bicep
-      run: az deployment group create --resource-group demo-rg --template-file templates/storage-bicep.bicep
+      run: az deployment group create -g demo-rg -f templates/storage-bicep.bicep
