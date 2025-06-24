@@ -477,7 +477,7 @@ To enable GitHub Actions to deploy to Azure, you need to create a Service Princi
    - Value: Paste the entire JSON content from `azure-credentials.json`.
    - Save.
 
-  ![alt text](docs/screenshots/github-actions-secrets-blur.png)
+    ![alt text](docs/screenshots/github-actions-secrets-blur.png)
 
 > **Security Tip:** Never share your credentials file. Delete the local file after adding it to GitHub.
 
