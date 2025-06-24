@@ -1,5 +1,7 @@
+param secondStorageAccountName string
+
 resource stg 'Microsoft.Storage/storageAccounts@2021-02-01' = {
-  name: 'devstor${UNIQUE}'
+  name: secondStorageAccountName
   location: resourceGroup().location
   sku: {
     name: 'Standard_LRS'

@@ -2,7 +2,7 @@
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
   "parameters": {
     "storageAccountName": {
-      "value": "devmmikstor1"
+      "value": "devstor<your-unique>"
     }
   }
 }
